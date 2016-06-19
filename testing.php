@@ -8,6 +8,17 @@ $client = new \GuzzleHttp\Client([
     ]
 ]);
 
-$response = $client->post('/api/programmers');
+$response = $client->post('/api/comment/2/plus');
+echo "Plus vote:";
+echo $response;
+echo "\n\n";
+
+$response = $client->post('/api/comment/2/minus');
+echo 'Minus vote:';
+echo $response;
+echo "\n\n";
+
+$response = $client->post('/api/comment/2/total');
+echo 'Total votes:';
 echo $response;
 echo "\n\n";
