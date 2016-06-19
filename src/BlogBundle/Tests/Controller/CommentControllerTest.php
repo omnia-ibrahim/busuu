@@ -12,6 +12,16 @@ class CommentControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/');
 
-        $this->assertContains('Hello World', $client->getResponse()->getContent());
+        $this->assertContains('Hello Busuu', $client->getResponse()->getContent());
+    }
+    public function testApi() 
+    {
+       // Assert that the "Content-Type" header is "application/json"
+       $this->assertTrue(
+       $client->getResponse()->headers->contains(
+        'Content-Type',
+        'application/json'
+           )
+      );
     }
 }

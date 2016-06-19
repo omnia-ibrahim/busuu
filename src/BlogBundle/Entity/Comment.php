@@ -34,6 +34,12 @@ class Comment
      */
     protected $created;
 
+    
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $votes;
+
     /**
      * @ORM\Column(type="datetime")
      */
